@@ -1,7 +1,10 @@
 planfinal.md
-mpi.md
 
 # Local VM artifacts. Keep the declarative inputs in git, not generated disks.
 VMs/*.img
 VMs/*.iso
 VMs/*.qcow2
+
+# Python tooling for scripts/ (matplotlib lives in the venv)
+.venv/
+__pycache__/
