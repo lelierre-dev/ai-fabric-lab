@@ -1,0 +1,21 @@
+#cloud-config
+hostname: node2
+users:
+  - name: ubuntu
+    groups: sudo
+    shell: /bin/bash
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDBEYZS7bF0F4PXruT7sdUWpjIs46aV0uIj4GbjzrsN8 yohan@neon
+
+package_update: true
+packages:
+  - openssh-server
+  - net-tools
+
+write_files:
+  - path: /etc/hosts
+    append: true
+    content: |
+      10.0.0.1 node1
+      10.0.0.2 node2

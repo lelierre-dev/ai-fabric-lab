@@ -1,0 +1,4 @@
+<network>
+  <name>rdma-lab</name>
+  <bridge name="virbr-rdma" stp="on" delay="0"/>
+</network>

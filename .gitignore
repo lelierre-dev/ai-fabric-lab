@@ -1,1 +1,6 @@
 planfinal.md
+
+# Local VM artifacts. Keep the declarative inputs in git, not generated disks.
+VMs/*.img
+VMs/*.iso
+VMs/*.qcow2
