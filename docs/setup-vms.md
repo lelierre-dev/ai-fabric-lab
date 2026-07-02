@@ -45,13 +45,6 @@ VMs/
 └── user-data-node2.yml
 ```
 
-Generated VM artifacts are intentionally ignored by git:
-
-```text
-VMs/*.img
-VMs/*.iso
-VMs/*.qcow2
-```
 
 The active libvirt disk files live outside the repo:
 
