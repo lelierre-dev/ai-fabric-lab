@@ -40,8 +40,9 @@ host (Ubuntu + KVM/libvirt)
 a normal Ethernet NIC. RoCEv2 is RDMA encapsulated in UDP port 4791, which is
 what real AI datacenters deploy. The API and all the tools are identical to
 hardware RDMA. Only the performance is not, since every packet still goes
-through the kernel. That trade-off is the whole point: you get the real stack,
-the real tooling and the real failure modes, on any machine.
+through the kernel. But the point of using it this way is to train on the real
+stack, the real tooling, and the real failure modes, not a sanitized
+approximation of them.
 
 ```
 sudo modprobe rdma_rxe
@@ -77,8 +78,7 @@ a registered memory region of the remote machine; the remote CPU does nothing.
 copy gets a rank, and they communicate through operations like `allreduce`. The
 OSU Micro-Benchmarks measure the cost of those operations. First lesson learned
 here: the default OpenMPI run silently picked the NAT management network, so the
-benchmark had to be pinned to the fabric explicitly. Trust flags, not defaults,
-then verify.
+benchmark had to be pinned to the fabric explicitly. 
 
 The working TCP path:
 
