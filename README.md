@@ -232,7 +232,7 @@ troubleshooting runbook built from deliberately provoked failures.
 
 ![alt text](img/image.png)
 
-in process
+
 
 
 ## note
