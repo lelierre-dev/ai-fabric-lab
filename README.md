@@ -226,6 +226,15 @@ RoCEv2 packet dissection in Wireshark (BTH headers on UDP 4791), and a
 troubleshooting runbook built from deliberately provoked failures.
 
 
+# Part 2
+
+## Wireshark packet dissectation
+
+![alt text](img/image.png)
+
+in process
+
+
 ## note
 
 This lab was built as a learning project. AI assistance was used to support the writing of the report, to help learn the core HPC concepts, and to assist with scripting.
